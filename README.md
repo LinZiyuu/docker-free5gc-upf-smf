@@ -12,6 +12,11 @@ You can setup your own config in [config](./config) folder and [docker-compose.y
 
 **Note: AVX for MongoDB**: some HW does not support MongoDB releases above`4.4` due to use of the new AVX instructions set. To verify if your CPU is compatible you can check CPU flags by running `grep avx /proc/cpuinfo`. A workaround is suggested [here](https://github.com/free5gc/free5gc-compose/issues/30#issuecomment-897627049).
 
+## Network Configuration
+
+- **SMF/UPF network**: `10.100.200.0/24` (bridge name: `br-free5gc`)
+  - UPF IP: `10.100.200.3`
+  - SMF IP: `10.100.200.4`
 ## Start free5gc
 
 Because we need to create tunnel interface, we need to use privileged container with root permission.
